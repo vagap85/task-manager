@@ -1,70 +1,139 @@
-# Getting Started with Create React App
+# Менеджер задач (Task Manager)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Простое одностраничное приложение (SPA) для управления задачами на React с использованием Tailwind CSS.
 
-## Available Scripts
+![Task Manager Screenshot](https://img.shields.io/badge/React-18.2-blue) ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC) ![License](https://img.shields.io/badge/license-MIT-green)
 
-In the project directory, you can run:
+## 🚀 Функциональность
 
-### `npm start`
+- ✅ **Добавление задач** с названием и описанием
+- ✅ **Просмотр списка задач** с фильтрацией по статусу
+- ✅ **Изменение статуса задачи** (pending → in_progress → done → pending)
+- ✅ **Удаление задач** с анимацией
+- ✅ **Сохранение задач** в localStorage
+- ✅ **Статистика** по количеству задач
+- ✅ **Адаптивный дизайн** (320px - 1440px)
+- ✅ **Анимации** при добавлении/удалении задач
+- ✅ **Темная/светлая тема** (автоматическая)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 📸 Скриншоты
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Десктоп версия
+![Десктоп](https://via.placeholder.com/800x450/374151/FFFFFF?text=Desktop+View)
 
-### `npm test`
+### Мобильная версия  
+![Мобильная](https://via.placeholder.com/350x600/374151/FFFFFF?text=Mobile+View)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠️ Технологии
 
-### `npm run build`
+- **React 18.2** - Библиотека для построения пользовательских интерфейсов
+- **Tailwind CSS 3.4** - Утилитарный CSS-фреймворк
+- **React Hooks** - useState, useEffect, useRef
+- **LocalStorage** - Сохранение данных между сессиями
+- **Vite/Webpack** - Сборка проекта
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📁 Структура проекта
+task-manager/<br>
+├── public/ # Статические файлы<br>
+├── src/<br>
+│ ├── components/ # React компоненты<br>
+│ │ ├── TaskForm.jsx<br>
+│ │ ├── TaskList.jsx<br>
+│ │ └── TaskItem.jsx<br>
+│ ├── utils/ # Вспомогательные функции<br>
+│ │ └── storage.js<br>
+│ ├── App.jsx # Основной компонент<br>
+│ ├── index.js # Точка входа<br>
+│ └── index.css # Стили<br>
+├── package.json # Зависимости и скрипты<br>
+├── tailwind.config.js # Конфигурация Tailwind<br>
+├── postcss.config.js # Конфигурация PostCSS<br>
+└── README.md # Документация<br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🚀 Установка и запуск
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Предварительные требования
+- Node.js (версия 14.0.0 или выше)
+- npm или yarn
 
-### `npm run eject`
+### Установка
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Клонируйте репозиторий:
+```bash
+git clone https://github.com/vagap85/task-manager.git
+cd task-manager
+Установите зависимости:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+bash
+npm install
+Запустите в режиме разработки:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+bash
+npm start
+Откройте http://localhost:3000 в браузере.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Сборка для production
+bash
+npm run build
+📱 Использование
+Добавление задачи
+Введите название задачи в поле "Название задачи"
 
-## Learn More
+Добавьте описание в поле "Описание задачи"
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Нажмите кнопку "Добавить задачу"
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Управление задачами
+Смена статуса: Нажмите "Сменить статус" для переключения между статусами
 
-### Code Splitting
+Удаление: Нажмите "Удалить" для удаления задачи
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Очистка всех: Нажмите "Очистить все" в шапке для удаления всех задач
 
-### Analyzing the Bundle Size
+Статусы задач
+⏳ В ожидании (pending) - задача ожидает начала выполнения
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+🚧 В процессе (in_progress) - задача выполняется
 
-### Making a Progressive Web App
+✅ Выполнено (done) - задача завершена
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+🎨 Особенности дизайна
+Адаптивный дизайн: Корректное отображение на всех устройствах
 
-### Advanced Configuration
+Анимации: Плавные переходы при добавлении/удалении задач
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Цветовая схема: Интуитивная цветовая кодировка статусов
 
-### Deployment
+Интерактивность: Эффекты наведения и обратная связь
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+🔧 Настройка Tailwind CSS
+Проект использует Tailwind CSS для стилизации. Конфигурация находится в tailwind.config.js:
 
-### `npm run build` fails to minify
+javascript
+module.exports = {
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
+  theme: {
+    extend: {
+      animation: {
+        'fade-in': 'fadeIn 0.5s ease-in-out',
+        'slide-in': 'slideIn 0.3s ease-out',
+      }
+    }
+  }
+}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+📄 Лицензия
+Этот проект лицензирован под лицензией MIT. См. файл LICENSE для подробностей.
+
+👤 Автор
+vagap85
+
+GitHub: @vagap85
+
+🙏 Благодарности
+React за отличную библиотеку
+
+Tailwind CSS за удивительные стили
+
+Create React App за шаблон проекта
